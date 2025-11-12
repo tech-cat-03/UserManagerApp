@@ -1,0 +1,321 @@
+﻿.table-container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+    .table-header h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+        .table-header h3 span {
+            color: #999;
+            font-weight: 400;
+            margin-left: 0.25rem;
+        }
+
+.table-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.search-box input {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border 0.2s ease;
+}
+
+    .search-box input:focus {
+        border-color: #d70036;
+    }
+
+.filter-btn {
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 0.45rem 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+    .filter-btn:hover {
+        background: #f5f5f5;
+    }
+
+.add-btn {
+    background: #d70036;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+    .add-btn:hover {
+        background: #a30029;
+    }
+
+.filter-btn,
+.add-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+    .filter-btn svg,
+    .add-btn svg {
+        margin-top: -1px;
+    }
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .user-table th {
+        text-align: left;
+        color: #666;
+        font-weight: 600;
+        font-size: 0.85rem;
+        padding: 0.75rem 0.5rem;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+    }
+
+    .user-table td {
+        padding: 0.5rem 0.5rem;
+        border-bottom: 1px solid #f3f3f3;
+        vertical-align: middle;
+        color: #333;
+        font-size: 0.9rem;
+        cursor: pointer;
+    }
+
+    .user-table tbody tr:hover td {
+        background-color: #faf8f8;
+        transition: background-color 0.2s ease;
+    }
+
+.user-cell {
+    display: flex;
+    flex-direction: column;
+}
+
+    .user-cell .name {
+        font-weight: 500;
+        line-height: 1.3;
+    }
+
+    .user-cell .email {
+        font-size: 0.8rem;
+        color: #777;
+    }
+
+.badge-group {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 999px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.badge-green {
+    background: #e5f9ed;
+    color: #1a8c46;
+}
+
+.badge-blue {
+    background: #e8f1ff;
+    color: #2653d4;
+}
+
+.badge-purple {
+    background: #f4e8ff;
+    color: #742ddf;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 1.2rem;
+}
+
+.page-btn {
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.4rem 0.75rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+    .page-btn:hover {
+        background: #f5f5f5;
+    }
+
+    .page-btn.active {
+        background: #d70036;
+        color: #fff;
+        border-color: #d70036;
+    }
+
+.more-icon {
+    color: #999;
+    cursor: pointer;
+}
+
+.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+    .checkbox:hover {
+        border-color: #d70036;
+        box-shadow: 0 0 0 3px rgba(90, 45, 223, 0.1);
+    }
+
+    .checkbox:checked {
+        background-color: #d70036;
+        border-color: #d70036;
+    }
+
+        .checkbox:checked::after {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 10px;
+            border-right: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -65%) rotate(45deg);
+        }
+
+    .checkbox:focus-visible {
+        outline: 2px solid rgba(90, 45, 223, 0.3);
+        outline-offset: 2px;
+    }
+
+.actions-cell {
+    position: relative;
+}
+
+.dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 22px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    min-width: 130px;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.15s ease-in-out;
+}
+
+    .dropdown-menu button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        border: none;
+        background: none;
+        color: #333;
+        padding: 0.6rem 0.9rem;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: background 0.2s ease, color 0.2s ease;
+    }
+
+        .dropdown-menu button:hover {
+            background: #f7f7f7;
+            color: #d70036;
+        }
+
+    .dropdown-menu svg {
+        color: #888;
+    }
+
+    .dropdown-menu button:hover svg {
+        color: #d70036;
+    }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-3px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.clickable-row {
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+    .clickable-row:hover td {
+        background-color: #f8f8f8;
+    }
+
+/* === Vertical scroll for table on small screens === */
+@media (max-width: 1024px) {
+    .table-container {
+        overflow-y: auto;
+        max-height: 70vh;
+    }
+
+    .user-table {
+        min-width: 700px;
+    }
+}

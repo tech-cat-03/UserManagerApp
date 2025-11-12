@@ -1,0 +1,306 @@
+﻿.login-container {
+    display: flex;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background: #1e0b35;
+    color: #fff;
+    overflow: hidden;
+}
+
+.login-left {
+    flex: 1.5;
+    background: linear-gradient(145deg, #f23363, #940025);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+.login-decor {
+    position: absolute;
+    right: -2rem;
+    bottom: -1rem;
+    width: 55%;
+    max-width: 31.25rem;
+    height: auto;
+    object-fit: contain;
+    pointer-events: none;
+    border: 9px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+}
+
+.login-brand {
+    max-width: 25rem;
+}
+
+.brand-logo {
+    width: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.login-brand h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.login-brand p {
+    font-size: 0.95rem;
+    color: #e8e4ff;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.see-sql {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.see-sql:hover {
+        background: rgba(255, 255, 255, 0.25);
+}
+
+.login-right {
+    flex: 1;
+    background: white;
+    display: flex;
+    color: #222;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.login-card {
+    width: 100%;
+    background: #fff;
+    padding: 4rem;
+    padding-top: 5rem;
+}
+
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.tab {
+    flex: 1;
+    padding: 0.75rem;
+    background: none;
+    border: none;
+    font-weight: 600;
+    color: #777;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
+
+.tab.active {
+        color: #d70036;
+        border-color: #d70036;
+}
+
+.login-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.login-form label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    display: block;
+}
+
+.login-form input {
+    width: 95%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.login-form input:focus {
+        border: 2px solid #d70036;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(215, 0, 54, 0.1);
+}
+
+.login-form select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    background: #fff;
+    color: #333;
+}
+
+.forgot {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.forgot a {
+    color: #d70036;
+    font-size: 0.85rem;
+}
+
+.login-btn {
+    width: 100%;
+    background: #d70036;
+    color: #fff;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    transition: background 0.2s ease;
+}
+
+.login-btn:hover {
+    background: #a30029;
+}
+
+.divider {
+    text-align: center;
+    color: #aaa;
+    font-size: 0.85rem;
+    margin: 0.5rem 0;
+}
+
+.github-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.github-btn img {
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+.terms {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 1.5rem;
+    padding-bottom: 4rem;
+}
+
+.terms a {
+    color: #d70036;
+    text-decoration: none;
+}
+
+/* --- 1600px screens --- */
+@media (min-width: 1600px) {
+    .login-left {
+        flex: 2;
+        padding: 5rem 6rem;
+    }
+
+    .login-brand h1 {
+        font-size: clamp(2rem, 1vw + 1.8rem, 2.8rem);
+    }
+
+    .login-brand p {
+        font-size: clamp(1rem, 0.5vw + 0.9rem, 1.25rem);
+        max-width: 600px;
+    }
+
+    .login-decor {
+        width: 60%;
+        right: -4rem;
+        bottom: -2rem;
+        border-width: 12px;
+    }
+
+    .login-card {
+        padding: 6rem;
+    }
+
+    .login-form input {
+        padding: 1rem;
+    }
+
+    .login-form select {
+        width: 103%;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid #ddd;
+        border-radius: 0.5rem;
+        font-size: 0.9rem;
+        background: #fff;
+        color: #333;
+    }
+
+    .login-btn {
+        padding: 1.1rem;
+    }
+}
+
+/* --- 1800px screens - wide screens --- */
+@media (min-width: 1800px) {
+    .login-decor {
+        width: 65%;
+        right: -2rem;
+        max-width: 40rem;
+        bottom: -2rem;
+        border-width: 12px;
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+
+    .login-left {
+        flex: 2.2;
+        padding: 4rem 6rem;
+    }
+
+    .login-right {
+        flex: 1.2;
+    }
+
+    .login-brand h1 {
+        font-size: clamp(2.5rem, 1.5vw, 3.5rem);
+    }
+
+    .login-brand p {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .login-left {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-left{
+        display: none;
+    }
+}
