@@ -41,7 +41,7 @@ Open ```UserManagerApp.Server/appsettings.json``` and set your values (if not al
     "ClientB": "67890-ZYXWV-APIKEY"
   },
   "Jwt": {
-    "Key": "super_secret_jwt_key_123456789_super_secret_jwt_key", // >= 32 chars!
+    "Key": "super_secret_jwt_key_123456789_ABCDEF", // >= 32 chars!
     "Issuer": "UserManagerApp",
     "Audience": "UserManagerAppUsers"
   },
